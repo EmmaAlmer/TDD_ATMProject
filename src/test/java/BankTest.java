@@ -6,9 +6,9 @@ public class BankTest {
     // Implementera funktion för att skapa ett nytt konto
     // (med användar-ID och startbalans)
     @Test
-    void createAccount(){
+    void createAccountTest(){
         Bank bank = new Bank();
-        bank.createUser(1, 100); // id, startbalans
-        assertEquals(100, bank.getAccountBalance(1));
+        bank.createAccount(10, 101); // id, startbalans
+        assertEquals(101, bank.getAccountBalance(10));
     }
 }
