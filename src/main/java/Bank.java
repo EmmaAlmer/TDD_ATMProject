@@ -4,7 +4,7 @@ public class Bank {
 
     ArrayList <Account> accountList = new ArrayList<>();
 
-    // Implementera funktion för att skapa ett nytt konto
+    // Funktion för att skapa ett nytt konto
     // (med användar-ID och startbalans)
     public void createAccount(int id, int startBalance){
 
@@ -12,7 +12,7 @@ public class Bank {
         accountList.add(account);
     }
 
-    public int getAccountBalance(int id) {
+    public Account getAccount(int id) {
 
         for (int i = 0; accountList.size() > i; i++){
 
@@ -20,9 +20,26 @@ public class Bank {
 
             if(a.getId() == id){
 
-                return a.getBalance();
+                return a;
             }
         }
-        return -1;
+        return null;
+    }
+
+    public int getAccountBalance(int id) {
+
+        Account account = getAccount(id);
+        if(account == null){
+            return -1;
+        }
+        return account.getBalance();
+    }
+
+    //bevara pengar på ett säkert sätt
+    public void transferToAccount(Account account, User user, int cash){
+
+        if(user.removeCash(cash)){
+            account.addCash(cash);
+        }
     }
 }

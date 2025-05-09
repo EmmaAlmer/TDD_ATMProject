@@ -8,7 +8,16 @@ public class BankTest {
     @Test
     void createAccountTest(){
         Bank bank = new Bank();
-        bank.createAccount(10, 101); // id, startbalans
-        assertEquals(101, bank.getAccountBalance(10));
+        bank.createAccount(1, 100); // id, startbalans
+        assertEquals(100, bank.getAccountBalance(1));
+    }
+
+    @Test
+    void storeMoneyTest(){
+        Bank bank = new Bank();
+        bank.createAccount(2, 0); // id, startbalans
+        User user = new User(50);
+        bank.transferToAccount(bank.getAccount(/*id*/ 2), user, 20);
+        assertEquals(20, bank.getAccountBalance(2));
     }
 }

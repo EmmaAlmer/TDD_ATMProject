@@ -17,6 +17,10 @@ public class Account {
         return balance;
     }
 
+    public void addCash(int cash){
+        this.balance += cash;
+    }
+
 
 
 
