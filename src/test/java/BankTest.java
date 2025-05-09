@@ -12,6 +12,7 @@ public class BankTest {
         assertEquals(100, bank.getAccountBalance(1));
     }
 
+    //Tanken var att lagra pengar, men blev en transaktion istället
     @Test
     void storeMoneyTest(){
         Bank bank = new Bank();
@@ -19,5 +20,23 @@ public class BankTest {
         User user = new User(50);
         bank.transferToAccount(bank.getAccount(/*id*/ 2), user, 20);
         assertEquals(20, bank.getAccountBalance(2));
+    }
+
+    //Från account till cash
+    @Test
+    void withdrawMoneyTest(){
+        Bank bank = new Bank();
+        bank.createAccount(3, 150);
+        User user = new User(0);
+        bank.transferFromAccount(bank.getAccount(3), user, 50);
+        assertEquals(50, user.getCash());
+    }
+
+    //Historik över transaktioner, insättning samt utdrag
+    @Test
+    void transactionHistoryTest(){
+        Bank bank = new Bank();
+        bank.createAccount(3, 150);
+        User user = new User(0);
     }
 }

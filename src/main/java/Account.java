@@ -22,6 +22,11 @@ public class Account {
     }
 
 
-
-
+    public boolean removeBalance(int cash) {
+        if(this.balance >= cash){
+            this.balance -= cash;
+            return true;
+        }
+        return false;
+    }
 }

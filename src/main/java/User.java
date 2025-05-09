@@ -18,4 +18,8 @@ public class User {
         }
         return false;
     }
+
+    public void addCash(int cash) {
+        this.cash += cash;
+    }
 }

@@ -42,4 +42,10 @@ public class Bank {
             account.addCash(cash);
         }
     }
+
+    public void transferFromAccount(Account account, User user, int cash){
+        if(account.removeBalance(cash)){
+            user.addCash(cash);
+        }
+    }
 }
