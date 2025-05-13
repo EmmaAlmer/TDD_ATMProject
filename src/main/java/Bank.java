@@ -32,14 +32,6 @@ public class Bank {
         if(account == null){
             return -1;
         }
-        return account.getBalance();
-    }
-
-    //bevara pengar på ett säkert sätt
-    public void transferToAccount(Account account, User user, int cash){
-
-        if(user.removeCash(cash)){
-            account.addCash(cash);
-        }
+        return account.getMoneyStorage().getBalance();
     }
 }

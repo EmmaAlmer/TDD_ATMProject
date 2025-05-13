@@ -1,21 +1,15 @@
 public class User {
 
-    int cash;
+    MoneyStorage cash;
 
     public User(int cash) {
-        this.cash = cash;
+        this.cash = new MoneyStorage(cash);
+    }
+    public User() {
+        this.cash = new MoneyStorage();
     }
 
-    public int getCash() {
+    public MoneyStorage getMoneyStorage() {
         return cash;
-    }
-
-    public boolean removeCash(int cash){
-
-        if (cash <= this.cash){
-            this.cash -= cash;
-            return true;
-        }
-        return false;
     }
 }
