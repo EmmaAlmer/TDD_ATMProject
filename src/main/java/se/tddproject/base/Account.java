@@ -21,7 +21,6 @@ public class Account {
         this.balance = new MoneyStorageWithReciept(0);
     }
 
-
     public int getId() {
         return id;
     }
@@ -33,4 +32,5 @@ public class Account {
     public int getBalance(){
         return this.balance.getBalance();
     }
+
 }
