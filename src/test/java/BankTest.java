@@ -25,8 +25,9 @@ public class BankTest {
         Bank bank = new Bank();
         bank.createAccount(2, 0); // id, startbalans
         User user = new User(50);
-        user.getMoneyStorage().transferTo(bank.getAccount(/*id*/ 2).getMoneyStorage(), 20);
+        bank.getAccount(/*id*/ 2).transferFrom(user.getMoneyStorage(), 20, "testUser");
         assertEquals(20, bank.getAccountBalance(2));
-        //assertEquals(30, user.getMoneyStorage().getBalance());
+        assertEquals(30, user.getMoneyStorage().getBalance());
     }
+
 }

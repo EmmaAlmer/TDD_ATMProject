@@ -32,6 +32,6 @@ public class Bank {
         if(account == null){
             return -1;
         }
-        return account.getMoneyStorage().getBalance();
+        return account.getBalance();
     }
 }

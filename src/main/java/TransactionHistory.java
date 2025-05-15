@@ -5,11 +5,21 @@ public class TransactionHistory {
     private int amount;
     private LocalDateTime timeStamp;
 
-    public TransactionHistory(String fromName, String toName, int amount, LocalDateTime timeStamp) {
+    public TransactionHistory(String fromName, String toName, int amount) {
         this.fromName = fromName;
         this.toName = toName;
         this.amount = amount;
-        this.timeStamp = timeStamp;
+        this.timeStamp = LocalDateTime.now();
+    }
+
+    public String getFromName() {
+        return fromName;
+    }
+    public String getToName(){
+        return toName;
+    }
+    public int getAmount(){
+        return amount;
     }
 
     public String toString(){
