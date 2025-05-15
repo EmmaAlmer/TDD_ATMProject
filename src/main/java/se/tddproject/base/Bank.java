@@ -1,3 +1,5 @@
+package se.tddproject.base;
+
 import java.util.ArrayList;
 
 public class Bank {

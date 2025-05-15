@@ -1,3 +1,7 @@
+package se.tddproject.base;
+
+import se.tddproject.moneystorage.MoneyStorage;
+
 public class User {
 
     MoneyStorage cash;
@@ -6,7 +10,7 @@ public class User {
         this.cash = new MoneyStorage(cash);
     }
     public User() {
-        this.cash = new MoneyStorage();
+        this.cash = new MoneyStorage(0);
     }
 
     public MoneyStorage getMoneyStorage() {

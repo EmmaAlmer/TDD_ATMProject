@@ -1,3 +1,5 @@
+package se.tddproject.moneystorage;
+
 import java.time.LocalDateTime;
 
 public class TransactionHistory {
