@@ -34,7 +34,7 @@ public class BankTest {
     }
 
     @Test
-    void bothAccountsStoreReciepts(){
+    void bothAccountsStoreReceipts(){
         Bank bank = new Bank();
         bank.createAccount(1, 1000); // id, startbalans
         bank.createAccount(2, 0); // id, startbalans
